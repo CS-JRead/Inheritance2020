@@ -4,6 +4,11 @@ public class Doctor {
     protected String AlmaMater;
     private double fee;
 
+    public Doctor(String medSchool, double visitCost){
+        AlmaMater = medSchool;
+        fee = visitCost;
+    }
+
     public void treatPatient(Patient patient){
         System.out.println("Take two of these and call me if symtoms persist " + patient.getName());
     }
