@@ -9,12 +9,25 @@ public class Doctor {
         fee = visitCost;
     }
 
+    @Override
+    public String toString(){
+        return "Doctor who went to " + AlmaMater + " who charges "+ fee;
+    }
+
+    @Override
+    public boolean equals(Object other){
+        if ( !(other instanceof Doctor))
+            return false;
+        var otherDoctor = (Doctor)other;
+
+    }
+
     public void treatPatient(Patient patient){
         System.out.println("Take two of these and call me if symtoms persist " + patient.getName());
     }
 
     public double billPatient(Patient unwellPerson){
-        System.out.println(" Patient " + unwellPerson.getName() + " has to pay " + fee);
+        System.out.println(" Patient " + unwellPerson.getName() + " has to pay $" + fee);
         return fee;
     }
 
