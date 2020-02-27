@@ -19,7 +19,7 @@ public class Doctor {
         if ( !(other instanceof Doctor))
             return false;
         var otherDoctor = (Doctor)other;
-
+        //fix this
     }
 
     public void treatPatient(Patient patient){
