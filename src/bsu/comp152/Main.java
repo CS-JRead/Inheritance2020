@@ -13,12 +13,17 @@ public class Main {
         allDoctors.add(surg);
         allDoctors.add(doc2);
         var sickPerson = new Patient("Ed 'I shoulda got the shot' Smith");
-       for( var onCallDoc : allDoctors){
-           System.out.println("+++++++++++++++++++++New Doctor now +++++++++++++");
-           System.out.println(onCallDoc);
-           onCallDoc.treatPatient(sickPerson);
-           onCallDoc.billPatient(sickPerson);
-       }
+        var doc4 = new Doctor("Fancy Surgery School", 1000);
+        if(doc4.equals(surg))
+            System.out.println("They were the same!!!!!!");
+        else
+            System.out.println("???? NOT THE SAME??????");
+//       for( var onCallDoc : allDoctors){
+//           System.out.println("+++++++++++++++++++++New Doctor now +++++++++++++");
+//           System.out.println(onCallDoc);
+//           onCallDoc.treatPatient(sickPerson);
+//           onCallDoc.billPatient(sickPerson);
+//       }
 
     }
 }

@@ -15,6 +15,15 @@ public class Surgeon extends Doctor {
     }
 
     @Override
+    public boolean equals(Object other){
+        if ( !(other instanceof Surgeon))
+            return false;
+        Surgeon otherDoctor = (Surgeon)other;
+        boolean isSchoolSame = this.AlmaMater.equals(otherDoctor.AlmaMater);
+        return isSchoolSame && this.hospital.equals(otherDoctor.hospital);
+    }
+
+    @Override
     public void treatPatient(Patient patient) {
        System.out.println("Now about the slice and dice "+ patient.getName() + " in " + hospital);
         super.treatPatient(patient);

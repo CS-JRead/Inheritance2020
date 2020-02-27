@@ -16,10 +16,14 @@ public class Doctor {
 
     @Override
     public boolean equals(Object other){
+        //this would be bad Antipattern from class
+        //return this.toString().equals(other.toString());
+        //this is good
         if ( !(other instanceof Doctor))
             return false;
-        var otherDoctor = (Doctor)other;
-        //fix this
+        Doctor otherDoctor = (Doctor)other;
+        boolean isSchoolSame = this.AlmaMater.equals(otherDoctor.AlmaMater);
+        return isSchoolSame && fee == otherDoctor.fee;
     }
 
     public void treatPatient(Patient patient){
